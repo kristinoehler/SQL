@@ -1,0 +1,26 @@
+CREATE TABLE jewelry_store (
+id INTEGER PRIMARY KEY, 
+name TEXT, 
+quantity INTEGER, 
+material TEXT, 
+price REAL); 
+
+INSERT INTO jewelry_store VALUES (1, "Anklet", 56, "Gold", 79.99); 
+INSERT INTO jewelry_store VALUES (2, "Anklet", 42, "Silver", 50.00); 
+INSERT INTO jewelry_store VALUES (3, "Anklet", 37, "Bronze", 29.99); 
+INSERT INTO jewelry_store VALUES (4, "Bracelet", 30, "Gold", 89.99); 
+INSERT INTO jewelry_store VALUES (5, "Bracelet", 24, "Silver", 56.99); 
+INSERT INTO jewelry_store VALUES (6, "Bracelet", 72, "Beads", 45.99); 
+INSERT INTO jewelry_store VALUES (7, "Earrings", 90, "Gold", 75.00); 
+INSERT INTO jewelry_store VALUES (8, "Earrings", 30, "Silver", 39.99); 
+INSERT INTO jewelry_store VALUES (9, "Earrings", 20, "Bronze", 25.99);
+INSERT INTO jewelry_store VALUES (10, "Necklace", 30, "Gold", 50.99); 
+INSERT INTO jewelry_store VALUES (11, "Necklace", 30, "Silver", 45.99); 
+INSERT INTO jewelry_store VALUES (12, "Necklace", 35, "Beads", 25.00); 
+INSERT INTO jewelry_store VALUES (13, "Ring", 50, "Gold", 125.00); 
+INSERT INTO jewelry_store VALUES (14, "Ring", 49, "Silver", 115.25); 
+INSERT INTO jewelry_store VALUES (15, "Ring", 80, "Opal", 67.99); 
+
+SELECT * FROM jewelry_store ORDER BY price; 
+
+SELECT name, SUM (quantity) FROM jewelry_store GROUP BY name; 
